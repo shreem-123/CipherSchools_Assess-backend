@@ -1,8 +1,8 @@
-import userModel from "../models/user.model";
+import { User } from "../models/user.model";
 import { Request, Response } from 'express';
 
 export function findAll(req: Request, res: Response) {
-    userModel.find()
+    User.find()
         .then(users => {
             res.send(users);
         }).catch(err => {
