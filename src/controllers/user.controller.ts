@@ -10,7 +10,6 @@ export function findAll(req: Request, res: Response) {
                 message: err.message || "Something went wrong while getting list of users."
             });
         });
-
 }
 
 export function findOne(req: Request, res: Response) {
@@ -43,10 +42,8 @@ export function create(req: Request, res: Response) {
     }
 
     const user = new User({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.last_name,
-        phone: req.body.last_name,
+        fullName: req.body.fullName,
+        email: req.body.email,
         password: req.body.password
     });
 
