@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import { router } from './src/routes/user.routes';
 
 dotenv.config();
 
@@ -23,6 +24,8 @@ mongoose.connect(MONGODB_URL, {
 app.get('/', (req: Request, res: Response) => {
   res.send('Hi Mom');
 });
+
+app.use('/api/users', router)
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
