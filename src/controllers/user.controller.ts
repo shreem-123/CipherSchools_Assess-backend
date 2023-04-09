@@ -13,6 +13,28 @@ export function findAll(req: Request, res: Response) {
 
 }
 
+export function findOne(req: Request, res: Response) {
+    User.findById(req.params.id)
+     .then(user => {
+     if(!user) {
+      return res.status(404).send({
+      message: "User not found with id " + req.params.id
+    });
+   }
+    res.send(user);
+   }).catch(err => {
+     if(err.kind === 'ObjectId') {
+       return res.status(404).send({
+       message: "User not found with id " + req.params.id
+     });
+   }
+   return res.status(500).send({
+     message: "Error getting user with id " + req.params.id
+   });
+   });
+   };
+   
+
 export function create(req: Request, res: Response) {
     if (!req.body) {
         return res.status(400).send({
