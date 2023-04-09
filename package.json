@@ -1,0 +1,33 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "Set of APIs to manage users data",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shreem-123/Cipher_Assess-backend.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Shreem Asati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shreem-123/Cipher_Assess-backend/issues"
+  },
+  "homepage": "https://github.com/shreem-123/Cipher_Assess-backend#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}
